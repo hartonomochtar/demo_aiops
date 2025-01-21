@@ -1,0 +1,6 @@
+elasticsearch==8.17.0
+llama-index==0.12.8
+llama-index-llms-ollama==0.5.0
+llama-index-llms-openai==0.3.12
+python-dotenv==1.0.1
+streamlit==1.41.1
