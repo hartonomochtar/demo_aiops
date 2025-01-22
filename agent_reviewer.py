@@ -19,10 +19,10 @@ def agent_reviewer(user_input, answer):
     ## AI Agent Response:
     {answer}
     """
-    # local_llm = Ollama(model="mistral", request_timeout=600.0)
-    # response = local_llm.stream_complete(query_co)
-    llm = OpenAI(model="gpt-4o-mini", api_key=openai_api_key)
-    response = llm.complete(query_review)
+    local_llm = Ollama(model="llama3.1:8b", request_timeout=600.0, base_url="ollama:11434")
+    response = local_llm.complete(query_review)
+    # llm = OpenAI(model="gpt-4o-mini", api_key=openai_api_key)
+    # response = llm.complete(query_review)
 
     print("Agent Review Query")
     print(query_review)
