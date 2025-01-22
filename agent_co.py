@@ -23,8 +23,8 @@ def agent_co(id):
     for your reference, below is/are data retrieve from log or database: 
     {log_output}
     """
-    # local_llm = Ollama(model="mistral", request_timeout=600.0)
-    # response = local_llm.stream_complete(query_co)
-    llm = OpenAI(model="gpt-4o-mini", api_key=openai_api_key)
-    response = llm.complete(query_co)
+    local_llm = Ollama(model="llama3.1:8b", request_timeout=600.0, base_url="ollama:11434")
+    response = local_llm.complete(query_co)
+    # llm = OpenAI(model="gpt-4o-mini", api_key=openai_api_key)
+    # response = llm.complete(query_co)
     return(response)
