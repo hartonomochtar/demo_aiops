@@ -55,11 +55,11 @@ def agent_dispatcher(user_input):
     {user_input}
     
     """
-    # local_llm = Ollama(model="mistral", request_timeout=600.0)
-    # response = local_llm.complete(query_1)
+    local_llm = Ollama(model="llama3.1:8b", request_timeout=600.0, base_url="ollama:11434")
+    response = local_llm.complete(query_1)
     
-    llm = OpenAI(model="gpt-4o-mini", api_key=openai_api_key)
-    response = llm.complete(query_1)
+    # llm = OpenAI(model="gpt-4o-mini", api_key=openai_api_key)
+    # response = llm.complete(query_1)
     print(response)
 
     try:
